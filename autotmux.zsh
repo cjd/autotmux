@@ -1,4 +1,4 @@
-if [ -n "$TMUX" ] || [ $TERM = 'dumb' ]; then return; fi
+if [ -n "$TMUX" ] || [ $TERM = 'dumb' ] || [ "$GTK_IM_MODULE" = "cros" ]; then return; fi
 
 TMX='tmux'
 command -v tmx2 > /dev/null && TMX='tmx2'
